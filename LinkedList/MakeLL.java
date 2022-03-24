@@ -29,6 +29,18 @@ class LinkedList {
             head = n;
         }
     }
+    public void addLast(int x) {
+        Node newNode = new Node(x);
+        if(isEmpty()) {
+            addFirst(x);
+        } else {
+            Node curr = head;
+            while(curr.next != null) {
+                curr = curr.next;
+            }
+            curr.next = newNode;
+        }
+    }
     private class Node {
         int data;
         Node next;
